@@ -1,0 +1,1532 @@
+{
+  "id": "faa28603-ea7c-4994-9002-e0c4ac08dfde",
+  "version": "3.0",
+  "name": "New Project",
+  "url": "http://www.google.com",
+  "tests": [{
+    "id": "84510fcd-4a74-4884-a703-f65e99ced025",
+    "name": "Register",
+    "commands": [{
+      "id": "5b124aed-19d7-4932-9b1c-0d2d27595bbd",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ffd7356-e95d-42ae-9293-2c0a86e44334",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Регистрация",
+      "targets": [
+        ["linkText=Регистрация", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Регистрация')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'register')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3af2e903-2e8c-4a37-98fe-c07699382d06",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Вход",
+      "targets": [
+        ["linkText=Вход", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Вход')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Вход')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "54fb9ed4-f677-4bc1-834d-7bddd7394ddf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Регистрация",
+      "targets": [
+        ["linkText=Регистрация", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Регистрация')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'register')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8861c244-6f4d-48cf-8d1a-3c6eb9efec89",
+      "comment": "",
+      "command": "click",
+      "target": "name=login",
+      "targets": [
+        ["name=login", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4325b97-c4fb-4731-8fea-79ce4cbb680e",
+      "comment": "",
+      "command": "type",
+      "target": "name=login",
+      "targets": [
+        ["name=login", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Grew"
+    }, {
+      "id": "8341cfe4-dc8e-44ae-a33c-4c916d623e27",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "passs"
+    }, {
+      "id": "8e14eba8-affc-4e10-b4d4-c6d2143f97aa",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "Чикунов Данила Сергеевич"
+    }, {
+      "id": "91df657d-9b26-4268-a136-8d05b5ae075d",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(7)",
+      "targets": [
+        ["css=input:nth-child(7)", "css:finder"],
+        ["xpath=//input[@value='Зарегистрироваться']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a9145e6-0ad9-44f0-a032-e98b6c956775",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Выйти",
+      "targets": [
+        ["linkText=Выйти", "linkText"],
+        ["css=li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Выйти')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login?exit=true')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Выйти')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "86bd0f2d-7d37-4b3c-aa30-ef2c72d9e016",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a98d45de-5080-4872-9128-f2c3a98e421f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Регистрация",
+      "targets": [
+        ["linkText=Регистрация", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Регистрация')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'register')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d90ff91d-2960-4abd-8345-16118f577f7b",
+      "comment": "",
+      "command": "click",
+      "target": "name=login",
+      "targets": [
+        ["name=login", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70ff5944-6b4c-4f7d-b561-ae05e4b4c687",
+      "comment": "",
+      "command": "type",
+      "target": "name=login",
+      "targets": [
+        ["name=login", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Test"
+    }, {
+      "id": "473b926e-2158-4aa1-8036-bfe757cf96d9",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "66dc128c-742d-4756-a114-d1cd29c8f39c",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "passs"
+    }, {
+      "id": "3265180c-b515-4bea-83b3-b2dc24043df6",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b139944a-a758-4da6-a077-97dc90507434",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "Тестов Тест Тестович"
+    }, {
+      "id": "bf22a6f8-b31d-4b56-8ae8-c2d60cb66245",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(7)",
+      "targets": [
+        ["css=input:nth-child(7)", "css:finder"],
+        ["xpath=//input[@value='Зарегистрироваться']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce622240-c948-4c52-8098-dea5a4acbd6c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Выйти",
+      "targets": [
+        ["linkText=Выйти", "linkText"],
+        ["css=li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Выйти')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login?exit=true')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Выйти')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a4d3e4b-61cf-48d6-80f6-88686d1cd35c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "793803d8-bb4a-4772-8c88-136cc91a47f1",
+    "name": "Enter",
+    "commands": [{
+      "id": "045c2846-e3ce-446e-88bc-760c9852905e",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/login",
+      "targets": [],
+      "value": "http://localhost/login"
+    }, {
+      "id": "3c569c97-97f5-4bec-a9a1-694413607fcd",
+      "comment": "",
+      "command": "click",
+      "target": "name=login",
+      "targets": [
+        ["name=login", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13e12366-689b-4048-b921-9e9de9460de3",
+      "comment": "",
+      "command": "type",
+      "target": "name=login",
+      "targets": [
+        ["name=login", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Grew"
+    }, {
+      "id": "5648ba5c-06d0-421e-a068-28088dbf8188",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc716cb1-69e7-493f-a623-750a80d80a6d",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "passs"
+    }, {
+      "id": "8a96e63a-9d11-40c6-b727-545f5d0f5e7b",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(5)",
+      "targets": [
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@value='Войти']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d5a2b0e-d650-49e4-b835-826559738046",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/tasks/my",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b8b94a2-1749-480d-93d2-e9ad60c0dbd2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Мои задачи",
+      "targets": [
+        ["linkText=Мои задачи", "linkText"],
+        ["css=li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Мои задачи')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/tasks/my')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Мои задачи')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c1f63ea-1eeb-4fec-a514-48e98ce6dd91",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "4d0c13c1-31b4-4b2d-afd3-03809846313a",
+    "name": "Create a task",
+    "commands": [{
+      "id": "6474bc90-20c7-4f4d-99ad-0c9947e2b066",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/tasks/my",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9caeaa07-069d-43b1-b6a6-36a1bdd5a8f7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Создать задачу",
+      "targets": [
+        ["linkText=Создать задачу", "linkText"],
+        ["css=li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Создать задачу')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/tasks/create')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Создать задачу')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "159e675d-74d0-4642-8c4c-1689ecaba36c",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55c49135-5b55-4333-8051-94fb6aae4e9c",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Написать отчет"
+    }, {
+      "id": "446cd40d-fa23-4540-a09f-fd4ea693b28b",
+      "comment": "",
+      "command": "click",
+      "target": "id=desc",
+      "targets": [
+        ["id=desc", "id"],
+        ["name=desc", "name"],
+        ["css=#desc", "css:finder"],
+        ["xpath=//textarea[@id='desc']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1d4af0c-a93a-4cfc-a6e7-c96a21bee3cb",
+      "comment": "",
+      "command": "type",
+      "target": "id=desc",
+      "targets": [
+        ["id=desc", "id"],
+        ["name=desc", "name"],
+        ["css=#desc", "css:finder"],
+        ["xpath=//textarea[@id='desc']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Я люблю свою работу"
+    }, {
+      "id": "65a2e0da-7d08-4919-92ae-533467b54976",
+      "comment": "",
+      "command": "click",
+      "target": "id=deadline",
+      "targets": [
+        ["id=deadline", "id"],
+        ["name=deadline", "name"],
+        ["css=#deadline", "css:finder"],
+        ["xpath=//input[@id='deadline']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "48683135-2d4d-4f97-9c65-be3ca3da898c",
+      "comment": "",
+      "command": "type",
+      "target": "id=deadline",
+      "targets": [
+        ["id=deadline", "id"],
+        ["name=deadline", "name"],
+        ["css=#deadline", "css:finder"],
+        ["xpath=//input[@id='deadline']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "2024-12-06T23:59"
+    }, {
+      "id": "0e83a019-c74a-4edc-821f-dc89ef318541",
+      "comment": "",
+      "command": "click",
+      "target": "css=form",
+      "targets": [
+        ["css=form", "css:finder"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "10609ae4-bffd-46a6-b0e1-85bc5958c391",
+      "comment": "",
+      "command": "click",
+      "target": "id=priority",
+      "targets": [
+        ["id=priority", "id"],
+        ["name=priority", "name"],
+        ["css=#priority", "css:finder"],
+        ["xpath=//input[@id='priority']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2919078-f8cb-459a-9402-6a8f37ac7d2d",
+      "comment": "",
+      "command": "type",
+      "target": "id=priority",
+      "targets": [
+        ["id=priority", "id"],
+        ["name=priority", "name"],
+        ["css=#priority", "css:finder"],
+        ["xpath=//input[@id='priority']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "7"
+    }, {
+      "id": "b7e7c4e8-84fb-4b9a-8cd4-f1c9e6a1355b",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(10)",
+      "targets": [
+        ["css=input:nth-child(10)", "css:finder"],
+        ["xpath=//input[@value='Создать задачу']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8eabc0a1-e981-40e6-8a40-1b25442c24a8",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f6d1497-376f-4a9e-9620-0ee202cd60c3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card",
+      "targets": [
+        ["css=.card", "css:finder"],
+        ["xpath=//div[@id='list']/div/a/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "10a56e24-8997-4c56-94e6-2ba233e8d503",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "73faf5c5-247c-47d6-b2e4-d910b233b5bf",
+    "name": "Update task",
+    "commands": [{
+      "id": "830b657c-5c46-4ee2-9750-35219602f390",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/tasks/my",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "981f5c47-ffc3-4e5e-b1f3-b3a3ef8e1c92",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card",
+      "targets": [
+        ["css=.card", "css:finder"],
+        ["xpath=//div[@id='list']/div/a/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0778f09d-c48d-4364-a65f-ca1800f903e7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Изменить задачу",
+      "targets": [
+        ["linkText=Изменить задачу", "linkText"],
+        ["css=.actions > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Изменить задачу')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/tasks/update/16')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Изменить задачу')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a729450-8b9c-486b-b2e8-33054a4956f0",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "86cd70a1-1097-46bc-b511-96ce942d838b",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Написать отчет 2"
+    }, {
+      "id": "2e9faf60-7749-4db1-a0ab-d56103be2d5c",
+      "comment": "",
+      "command": "click",
+      "target": "id=desc",
+      "targets": [
+        ["id=desc", "id"],
+        ["name=desc", "name"],
+        ["css=#desc", "css:finder"],
+        ["xpath=//textarea[@id='desc']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "114d7528-0aa7-4b55-985f-d826c0d014b5",
+      "comment": "",
+      "command": "type",
+      "target": "id=desc",
+      "targets": [
+        ["id=desc", "id"],
+        ["name=desc", "name"],
+        ["css=#desc", "css:finder"],
+        ["xpath=//textarea[@id='desc']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Я люблю свою работу 2"
+    }, {
+      "id": "ff36831f-f542-4f6f-b28e-bc3913c80fe7",
+      "comment": "",
+      "command": "click",
+      "target": "id=deadline",
+      "targets": [
+        ["id=deadline", "id"],
+        ["name=deadline", "name"],
+        ["css=#deadline", "css:finder"],
+        ["xpath=//input[@id='deadline']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b61e4b9-5e94-4f27-a53e-5b65d516fd10",
+      "comment": "",
+      "command": "type",
+      "target": "id=deadline",
+      "targets": [
+        ["id=deadline", "id"],
+        ["name=deadline", "name"],
+        ["css=#deadline", "css:finder"],
+        ["xpath=//input[@id='deadline']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "2024-12-07T23:59"
+    }, {
+      "id": "92d8fabf-ab1c-49c4-b0ce-c26635cb45cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main",
+      "targets": [
+        ["css=.main", "css:finder"],
+        ["xpath=//div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d5fe8ae-a007-419a-8857-9ed9ce77776c",
+      "comment": "",
+      "command": "click",
+      "target": "id=priority",
+      "targets": [
+        ["id=priority", "id"],
+        ["name=priority", "name"],
+        ["css=#priority", "css:finder"],
+        ["xpath=//input[@id='priority']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9ef0b9c-0ef7-41ae-8c83-2f59e861935f",
+      "comment": "",
+      "command": "type",
+      "target": "id=priority",
+      "targets": [
+        ["id=priority", "id"],
+        ["name=priority", "name"],
+        ["css=#priority", "css:finder"],
+        ["xpath=//input[@id='priority']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "8"
+    }, {
+      "id": "cac5ad05-9b4e-4064-8a2b-a436526e1894",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(9)",
+      "targets": [
+        ["css=input:nth-child(9)", "css:finder"],
+        ["xpath=//input[@value='Изменить задачу']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "1297bd0f-b879-44ed-a001-1ec78792e29c",
+    "name": "Add subtask",
+    "commands": [{
+      "id": "48810abc-6e59-400a-8d6f-181aa7f7779d",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/tasks/my",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d98eea19-aa01-4e1e-ab3e-6c7c67c7cbab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card",
+      "targets": [
+        ["css=.card", "css:finder"],
+        ["xpath=//div[@id='list']/div/a/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c8f1711-4913-4279-969e-e47004d29176",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Добавить подзадачу",
+      "targets": [
+        ["linkText=Добавить подзадачу", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Добавить подзадачу')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/tasks/create?parent=16')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Добавить подзадачу')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "37a61f41-676d-460c-8acd-f37f2e79a597",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "acff60cb-0173-4894-b653-145663404019",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Написать введение"
+    }, {
+      "id": "263b8b0d-0aaf-4140-9626-978d35e250ac",
+      "comment": "",
+      "command": "click",
+      "target": "id=desc",
+      "targets": [
+        ["id=desc", "id"],
+        ["name=desc", "name"],
+        ["css=#desc", "css:finder"],
+        ["xpath=//textarea[@id='desc']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "64a8d5da-7946-41e3-bb1c-8cff7bc64993",
+      "comment": "",
+      "command": "type",
+      "target": "id=desc",
+      "targets": [
+        ["id=desc", "id"],
+        ["name=desc", "name"],
+        ["css=#desc", "css:finder"],
+        ["xpath=//textarea[@id='desc']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Написать введение"
+    }, {
+      "id": "3fb5e969-ff4e-45a4-81a9-4f89a7fceb9b",
+      "comment": "",
+      "command": "click",
+      "target": "id=deadline",
+      "targets": [
+        ["id=deadline", "id"],
+        ["name=deadline", "name"],
+        ["css=#deadline", "css:finder"],
+        ["xpath=//input[@id='deadline']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c422c474-3e33-402d-8cbb-334dbdbe70e8",
+      "comment": "",
+      "command": "type",
+      "target": "id=deadline",
+      "targets": [
+        ["id=deadline", "id"],
+        ["name=deadline", "name"],
+        ["css=#deadline", "css:finder"],
+        ["xpath=//input[@id='deadline']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "2024-12-05T14:38"
+    }, {
+      "id": "12b7bdd0-c21b-4c6b-bf8a-dcdb0183e68d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main",
+      "targets": [
+        ["css=.main", "css:finder"],
+        ["xpath=//div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3fb95e8-a02e-4940-8eab-bd20f9e76362",
+      "comment": "",
+      "command": "click",
+      "target": "id=priority",
+      "targets": [
+        ["id=priority", "id"],
+        ["name=priority", "name"],
+        ["css=#priority", "css:finder"],
+        ["xpath=//input[@id='priority']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ebf9236-2e65-48d1-9f7a-bd1a31ae8687",
+      "comment": "",
+      "command": "type",
+      "target": "id=priority",
+      "targets": [
+        ["id=priority", "id"],
+        ["name=priority", "name"],
+        ["css=#priority", "css:finder"],
+        ["xpath=//input[@id='priority']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "6"
+    }, {
+      "id": "a958decf-161b-4e9e-b5db-e81bf0f306bf",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(10)",
+      "targets": [
+        ["css=input:nth-child(10)", "css:finder"],
+        ["xpath=//input[@value='Создать задачу']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1aa182dd-2661-4185-b1bb-aac52034ab12",
+      "comment": "",
+      "command": "click",
+      "target": "css=.small_card:nth-child(1) .card-title",
+      "targets": [
+        ["css=.small_card:nth-child(1) .card-title", "css:finder"],
+        ["xpath=//div[@id='list']/div/a/div/div", "xpath:idRelative"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ab79131-77c6-4d37-979b-ba69925c41da",
+      "comment": "",
+      "command": "click",
+      "target": "css=.incard",
+      "targets": [
+        ["css=.incard", "css:finder"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "41322def-8540-4e4b-aa83-06aae0fecb1b",
+    "name": "Delegate task",
+    "commands": [{
+      "id": "144cedf5-6c1d-4b47-aae8-4f19d1c9d701",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/tasks/my",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f18c587f-0473-42c8-8d38-7a90d045cccf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.small_card:nth-child(1) .card",
+      "targets": [
+        ["css=.small_card:nth-child(1) .card", "css:finder"],
+        ["xpath=//div[@id='list']/div/a/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "461aff74-b513-4500-8e07-651d8c063121",
+      "comment": "",
+      "command": "click",
+      "target": "css=b",
+      "targets": [
+        ["css=b", "css:finder"],
+        ["xpath=//b", "xpath:position"],
+        ["xpath=//b[contains(.,'Написать введение')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c953e6e9-1e48-455f-bf04-4b371150a93d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Делегировать задачу",
+      "targets": [
+        ["linkText=Делегировать задачу", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Делегировать задачу')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/tasks/delegate/21')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Делегировать задачу')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "93e4d77b-80f5-4786-97a4-fae9bea0f1c1",
+      "comment": "",
+      "command": "click",
+      "target": "id=inp",
+      "targets": [
+        ["id=inp", "id"],
+        ["name=login", "name"],
+        ["css=#inp", "css:finder"],
+        ["xpath=//input[@id='inp']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0aa13ca7-f197-482f-89c0-a2d8c400de2e",
+      "comment": "",
+      "command": "type",
+      "target": "id=inp",
+      "targets": [
+        ["id=inp", "id"],
+        ["name=login", "name"],
+        ["css=#inp", "css:finder"],
+        ["xpath=//input[@id='inp']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": " "
+    }, {
+      "id": "717ba782-2034-43e5-8c63-c393861688ea",
+      "comment": "",
+      "command": "type",
+      "target": "id=inp",
+      "targets": [
+        ["id=inp", "id"],
+        ["name=login", "name"],
+        ["css=#inp", "css:finder"],
+        ["xpath=//input[@id='inp']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Test"
+    }, {
+      "id": "b1dfc23f-d9cb-42f6-b0d9-464b17416469",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(4)",
+      "targets": [
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@value='Делегировать']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "72e57e2c-4da1-45c2-bbb4-9be3c100ade9",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f6e32371-be1a-4223-95ab-ac8393ac96a6",
+    "name": "Open chat",
+    "commands": [{
+      "id": "8f8f3cec-961f-47fe-aa7e-c74067721cbc",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/tasks/my",
+      "targets": [],
+      "value": "http://localhost/login"
+    }, {
+      "id": "3fa54369-c595-4228-8d11-9a14c19d5ec2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card",
+      "targets": [
+        ["css=.card", "css:finder"],
+        ["xpath=//div[@id='list']/div/a/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e521c64-ac2d-4eab-b075-af700564779e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Открыть чат",
+      "targets": [
+        ["linkText=Открыть чат", "linkText"],
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Открыть чат')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comments/read/20')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Открыть чат')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5213c86-0089-4131-92e5-0fabd3666c96",
+      "comment": "",
+      "command": "click",
+      "target": "id=comment_text",
+      "targets": [
+        ["id=comment_text", "id"],
+        ["name=content", "name"],
+        ["css=#comment_text", "css:finder"],
+        ["xpath=//input[@id='comment_text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c227e68-eebe-4f64-a0c9-c48c90002426",
+      "comment": "",
+      "command": "type",
+      "target": "id=comment_text",
+      "targets": [
+        ["id=comment_text", "id"],
+        ["name=content", "name"],
+        ["css=#comment_text", "css:finder"],
+        ["xpath=//input[@id='comment_text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Бла бла"
+    }, {
+      "id": "adb58279-5dc3-45f8-b434-94fa1269a123",
+      "comment": "",
+      "command": "click",
+      "target": "css=.send-comment > button",
+      "targets": [
+        ["css=.send-comment > button", "css:finder"],
+        ["xpath=//button[@onclick='send_comment()']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Отправить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f3546589-3a8d-40d8-847e-a5ce0f04a2cf",
+    "name": "Sub unsub task",
+    "commands": [{
+      "id": "16354409-dd28-44aa-8e50-fbeed37fc9c2",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/tasks/my",
+      "targets": [],
+      "value": "http://localhost/login"
+    }, {
+      "id": "38a2d440-1746-4fea-bdb8-d7d2def6fa9e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card",
+      "targets": [
+        ["css=.card", "css:finder"],
+        ["xpath=//div[@id='list']/div/a/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "01b2f161-e7c9-462f-8099-31b61513e5bf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.incard-param > div:nth-child(1)",
+      "targets": [
+        ["css=.incard-param > div:nth-child(1)", "css:finder"],
+        ["xpath=//a/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a69e8c2-b429-4b55-94a6-598e36fb47b7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Открыть чат",
+      "targets": [
+        ["linkText=Открыть чат", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Открыть чат')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comments/read/21')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Открыть чат')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4bf530cb-3c1f-4de6-95e3-d2e01b72cf80",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sub-button",
+      "targets": [
+        ["css=.sub-button", "css:finder"],
+        ["xpath=//button[@onclick='changeSub()']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Отписаться')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "45302ce4-4d24-4e76-8479-10a234e30945",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Проверить подписки",
+      "targets": [
+        ["linkText=Проверить подписки", "linkText"],
+        ["css=li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Проверить подписки')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comments/checkout')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Проверить подписки')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5d1eeac-8276-4827-914c-ba74e6657c96",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Мои задачи",
+      "targets": [
+        ["linkText=Мои задачи", "linkText"],
+        ["css=li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Мои задачи')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/tasks/my')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Мои задачи')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3fb0af4-4160-48dc-8e4d-b32f3d738eee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card",
+      "targets": [
+        ["css=.card", "css:finder"],
+        ["xpath=//div[@id='list']/div/a/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b00fbf0-5fb4-4301-ba4b-226eb86dc209",
+      "comment": "",
+      "command": "click",
+      "target": "css=b",
+      "targets": [
+        ["css=b", "css:finder"],
+        ["xpath=//b", "xpath:position"],
+        ["xpath=//b[contains(.,'Написать введение')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1211d6ee-20dd-4359-a708-3336940fe878",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Открыть чат",
+      "targets": [
+        ["linkText=Открыть чат", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Открыть чат')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comments/read/21')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Открыть чат')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a146ab5e-7240-4b6e-a81f-3cafb3ff6f97",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sub-button",
+      "targets": [
+        ["css=.sub-button", "css:finder"],
+        ["xpath=//button[@onclick='changeSub()']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Подписаться')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a537e6e3-09e0-4c16-9c43-5db7b7ba43f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=nav",
+      "targets": [
+        ["css=nav", "css:finder"],
+        ["xpath=//nav", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7de87311-706c-479b-adae-7408093f6d7a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Проверить подписки",
+      "targets": [
+        ["linkText=Проверить подписки", "linkText"],
+        ["css=li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Проверить подписки')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comments/checkout')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Проверить подписки')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d263cf2-7535-4ad7-8ab6-ff1d6b885029",
+      "comment": "",
+      "command": "click",
+      "target": "css=.small_card:nth-child(3) .card-title",
+      "targets": [
+        ["css=.small_card:nth-child(3) .card-title", "css:finder"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "df4bf134-6a80-47ae-9156-d61387e7aefd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=задачи",
+      "targets": [
+        ["linkText=задачи", "linkText"],
+        ["css=.sub-message > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'задачи')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, '21/back')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36f723fe-8d20-444b-b305-d85419db3b71",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2b316f20-dc62-4a15-8d00-a5cdcc90be39",
+    "name": "Close open task",
+    "commands": [{
+      "id": "a79e85d7-a0ec-498a-aeaf-79109611ffce",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/tasks/my",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "662f7d39-ab94-427e-a43e-1321d1282b39",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card",
+      "targets": [
+        ["css=.card", "css:finder"],
+        ["xpath=//div[@id='list']/div/a/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b512cd6-3429-40bb-aa9e-40d00411cc23",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Закрыть задачу",
+      "targets": [
+        ["linkText=Закрыть задачу", "linkText"],
+        ["css=a:nth-child(6)", "css:finder"],
+        ["xpath=//a[contains(text(),'Закрыть задачу')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '42/close')]", "xpath:href"],
+        ["xpath=//a[6]", "xpath:position"],
+        ["xpath=//a[contains(.,'Закрыть задачу')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "81bf7d52-9069-4e10-b0b8-9d9c1352df74",
+      "comment": "",
+      "command": "click",
+      "target": "css=b",
+      "targets": [
+        ["css=b", "css:finder"],
+        ["xpath=//b", "xpath:position"],
+        ["xpath=//b[contains(.,'Написать введение')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a7884a9-5368-48d3-b77a-b4e5522a66d8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Делегировать задачу",
+      "targets": [
+        ["linkText=Делегировать задачу", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Делегировать задачу')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/tasks/delegate/43')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Делегировать задачу')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9b30665-2489-4ede-b5f1-f9d2b1c913a9",
+      "comment": "",
+      "command": "click",
+      "target": "id=inp",
+      "targets": [
+        ["id=inp", "id"],
+        ["name=login", "name"],
+        ["css=#inp", "css:finder"],
+        ["xpath=//input[@id='inp']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9a66119-6a79-4fc3-b959-6d1c4dcea22f",
+      "comment": "",
+      "command": "type",
+      "target": "id=inp",
+      "targets": [
+        ["id=inp", "id"],
+        ["name=login", "name"],
+        ["css=#inp", "css:finder"],
+        ["xpath=//input[@id='inp']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Grew"
+    }, {
+      "id": "7b81d48e-27c0-4f60-9d9c-fb1d816c2522",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(4)",
+      "targets": [
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@value='Делегировать']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4cb84979-65df-4dba-ab3a-b74da285c6ed",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Закрыть задачу",
+      "targets": [
+        ["linkText=Закрыть задачу", "linkText"],
+        ["css=a:nth-child(6)", "css:finder"],
+        ["xpath=//a[contains(text(),'Закрыть задачу')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '43/close')]", "xpath:href"],
+        ["xpath=//a[6]", "xpath:position"],
+        ["xpath=//a[contains(.,'Закрыть задачу')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "393e63d1-e1d5-4435-b1e3-d3a7366a2486",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Назад",
+      "targets": [
+        ["linkText=Назад", "linkText"],
+        ["css=.back > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Назад')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/tasks/task/42')]", "xpath:href"],
+        ["xpath=//div[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Назад')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9bcf0c35-55dc-438e-a625-e33183318560",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Закрыть задачу",
+      "targets": [
+        ["linkText=Закрыть задачу", "linkText"],
+        ["css=a:nth-child(6)", "css:finder"],
+        ["xpath=//a[contains(text(),'Закрыть задачу')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '42/close')]", "xpath:href"],
+        ["xpath=//a[6]", "xpath:position"],
+        ["xpath=//a[contains(.,'Закрыть задачу')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "11fad58f-21db-4fb6-bba1-cc82ae5b3db9",
+      "comment": "",
+      "command": "click",
+      "target": "css=b",
+      "targets": [
+        ["css=b", "css:finder"],
+        ["xpath=//b", "xpath:position"],
+        ["xpath=//b[contains(.,'Написать введение')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8578ea40-a93d-43a7-b66f-c725467300a2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Открыть задачу",
+      "targets": [
+        ["linkText=Открыть задачу", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Открыть задачу')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '43/open')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Открыть задачу')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0186dee9-878b-4943-b1ce-473c06ba4d5a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Назад",
+      "targets": [
+        ["linkText=Назад", "linkText"],
+        ["css=.back > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Назад')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/tasks/task/42')]", "xpath:href"],
+        ["xpath=//div[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Назад')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "680fc915-27ec-4b4e-9a66-0086bbbe0b0d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Открыть задачу",
+      "targets": [
+        ["linkText=Открыть задачу", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Открыть задачу')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '42/open')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Открыть задачу')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0b2b9c3-8c4f-43e8-9f00-db6826e72e48",
+      "comment": "",
+      "command": "click",
+      "target": "css=.incard",
+      "targets": [
+        ["css=.incard", "css:finder"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "779d8d2d-abfb-4b28-b60f-84da3dda1561",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Открыть задачу",
+      "targets": [
+        ["linkText=Открыть задачу", "linkText"],
+        ["css=a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Открыть задачу')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '43/open')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Открыть задачу')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a92473e-e333-4942-ba2b-266454684931",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "dca9f6fc-fe85-42cc-a250-942508a66d9c",
+    "name": "Delete task",
+    "commands": [{
+      "id": "d2614aef-d325-495a-9d9a-176ef4fb1d45",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/tasks/my",
+      "targets": [],
+      "value": "http://localhost/login"
+    }, {
+      "id": "46673bb3-48f6-4390-93d6-fff5ad0aae3b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.small_card:nth-child(1) .card",
+      "targets": [
+        ["css=.small_card:nth-child(1) .card", "css:finder"],
+        ["xpath=//div[@id='list']/div/a/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc69e78a-f89d-4f4c-bd82-3967ef2c8db4",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "efe12794-e770-4e3b-af0c-dfbf48a07d23",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Удалить задачу",
+      "targets": [
+        ["linkText=Удалить задачу", "linkText"],
+        ["css=a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Удалить задачу')]", "xpath:link"],
+        ["xpath=//a[@onclick='Action.delete(event)']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'Удалить задачу')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6dedb7b8-7245-47ec-91a6-68d23ec6b2d2",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c41c4364-7fed-4985-a10c-4531ea66ba53",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f447c8b7-785b-4dd0-b3dc-3bc9349a669b",
+    "name": "All",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 30000,
+    "tests": ["84510fcd-4a74-4884-a703-f65e99ced025", "793803d8-bb4a-4772-8c88-136cc91a47f1", "4d0c13c1-31b4-4b2d-afd3-03809846313a", "73faf5c5-247c-47d6-b2e4-d910b233b5bf", "1297bd0f-b879-44ed-a001-1ec78792e29c", "41322def-8540-4e4b-aa83-06aae0fecb1b", "f3546589-3a8d-40d8-847e-a5ce0f04a2cf", "f6e32371-be1a-4223-95ab-ac8393ac96a6", "2b316f20-dc62-4a15-8d00-a5cdcc90be39", "dca9f6fc-fe85-42cc-a250-942508a66d9c"]
+  }],
+  "urls": ["http://www.google.com/"],
+  "plugins": []
+}

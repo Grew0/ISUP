@@ -1,0 +1,8 @@
+<script>
+    alert("{{message}}");
+    {{#if redirect}}
+        document.location = "{{redirect}}";
+    {{else}}
+        document.location = "/tasks/my";
+    {{/if}}
+</script>

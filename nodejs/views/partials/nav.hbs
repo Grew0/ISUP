@@ -1,0 +1,44 @@
+<nav>
+    <ul>
+        <li><a href="/tasks/my">Мои задачи</a></li>
+        <li><a href="/tasks/create">Создать задачу</a></li>
+        <li><a href="/comments/checkout">Проверить подписки</a></li>
+        <li><a href="/login?exit=true">Выйти</a></li>
+    </ul>
+</nav>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    nav {
+        top: 0;
+        background-color: #69c1ff;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+
+    nav ul li {
+        margin-right: 20px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+</style>

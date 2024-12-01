@@ -1,0 +1,15 @@
+            {{#unless comments}}
+            <h3 style="margin: 20px;" style="width: max-content;"> Чат пуст</h3>
+            {{/unless}}
+            {{#each comments}}
+            <div class="comment">
+                <div class="comment-header">
+                    <p>Написал(а): {{this.writer.name}}</p>
+                    <p>{{DATEFORMAT this.date}}</p>
+                </div>
+                <div class="content">
+                    {{this.content}}
+                </div>
+            </div>
+
+            {{/each}}

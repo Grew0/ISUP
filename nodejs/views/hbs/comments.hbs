@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточка</title>
+    <style>
+        * {
+            overflow-wrap: break-word;
+        }
+
+        .feed,
+        .comment {
+            width: min(80vw, 80vh);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-left: auto;
+            margin-right: auto;
+            background: white;
+        }
+
+
+        .feed {
+            width: min-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-self: center;
+        }
+
+        .sub-message {
+            margin-right: 20px;
+        }
+
+        .sub-header {
+            width: max-content;
+        }
+
+        .sub-header,
+        .comment-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .sub-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+        .sub-button:hover {
+            background-color: #0056b3;
+        }
+
+        .send-comment {
+            width: calc(min(80vw, 80vh) + 40px);
+
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-left: auto;
+            margin-right: auto;
+            background: white;
+
+            border: none;
+            border-radius: 10px;
+            padding: 20px 20px;
+            font-size: 14px;
+
+            display: flex;
+
+            position: fixed;
+            left: 1vw;
+            right: 1vw;
+            z-index: 100;
+            bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .send-comment>button {
+            background-color: #28a745;
+            color: white;
+            width: min-content;
+            height: min-content;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+            align-self: center;
+        }
+
+        .send-comment>button:hover {
+            background-color: #218838;
+            /* Темнее при наведении */
+        }
+    </style>
+</head>
+
+<body>
+
+    {{> nav}}
+
+    <div class="feed-outer">
+        <div class="feed">
+            <div class="sub-header">
+                <p class="sub-message"></p>
+                <button class="sub-button" onclick="changeSub()"></button>
+            </div>
+            <div id="feed_cards"></div>
+        </div>
+    </div>
+
+
+    <div class="send-comment" method="post">
+        <input class="comment-text" id="comment_text" type="text" autocomplete="off" name="content"
+            placeholder="Ваш комментарий" autofocus onload="this.value = localStorage.getItem('saved send-comment')">
+        <button onclick="send_comment()">Отправить</button>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function classset(class_name = "", foreach = (elem) => { }) {
+        Array.from(document.getElementsByClassName(class_name)).forEach(foreach);
+    }
+
+    let addr_of_update = document.location.href.split("/");
+    if (addr_of_update[addr_of_update.length - 1].length == 0) addr_of_update.pop();
+    let task = addr_of_update.pop();
+    addr_of_update.pop();
+
+</script>
+
+
+<script>
+
+    addr_of_update.push("read", task, "getList");
+    addr_of_update = addr_of_update.join("/");
+
+    setInterval(async () => {
+        let result = await fetch(addr_of_update);
+        if (result.ok) {
+            let text = await result.text();
+            document.getElementById("feed_cards").innerHTML = text;
+        }
+    }, 500);
+
+</script>
+
+<script>
+    let comment_input = document.getElementById('comment_text');
+
+    comment_input.addEventListener("keypress", (event) => {
+        if (event.key == "Enter") { send_comment(); }
+    });
+
+    function send_comment() {
+        let addr = document.location.href.split("/");
+        if (addr[addr.length - 1].length == 0) addr.pop();
+        addr.pop();
+        addr.pop();
+        addr.push("write", task);
+        addr = addr.join("/");
+
+        let content = JSON.stringify({ content: comment_input.value });
+        fetch(addr + "", {
+            method: "POST",
+            body: content,
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        comment_input.value = "";
+    }
+
+</script>
+
+<script>
+
+    let sub = {{ isSub }};
+    setSub();
+
+    function setSub() {
+        if (sub) {
+            classset("sub-message", i => i.innerHTML = "Вы подписаны на чат <a href='" + task + "/back'>задачи</a>");
+            classset("sub-button", i => i.innerHTML = "Отписаться");
+        } else {
+            classset("sub-message", i => i.innerHTML = "Вы не подписаны на чат <a href='" + task + "/back'>задачи</a>");
+            classset("sub-button", i => i.innerHTML = "Подписаться");
+        }
+
+    }
+
+    function changeSub() {
+        sub = !sub;
+
+        setSub();
+
+        let addr = document.location.href.split("/");
+        if (addr[addr.length - 1].length == 0) addr.pop();
+        addr.pop();
+        addr.pop();
+        addr.push("sub", task, sub);
+
+        fetch(addr.join("/"), { method: "PATCH" }).then(console.log).catch(err => console.log(err.message));
+    }
+
+
+    classset("feed", i => {
+        i.style.marginBottom = document.getElementsByClassName("send-comment")[0].clientHeight + 20 + 'px';
+    })
+
+</script>

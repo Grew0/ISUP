@@ -1,0 +1,102 @@
+{{>nav}}
+
+<div class="main">
+
+    <form method="post">
+        <label for="users">Пользователи</label>
+        <input type="text" id="inp" placeholder="Имя или логин пользователя" required name="login">
+        <div id="chose">
+        </div>
+        <input type="submit" value="Делегировать">
+    </form>
+</div>
+
+<script>
+
+
+    let elem = document.getElementById("inp");
+    let chose = document.getElementById("chose");
+    let arr = [];
+
+    function setName(button) {
+        elem.value = button.getAttribute('login');
+        update();
+    }
+
+    function update(event) {
+        fetch(document.location.href + "/../../get/" + elem.value).then(async (res) => {
+            if (res.ok) {
+                chose.innerHTML = "";
+                arr = await res.json();
+                for (let i in arr) {
+                    chose.innerHTML += `<p class="options" onclick="setName(this)" login="${arr[i].login}" id="${arr[i].id}">${arr[i].name} (${arr[i].login})</p>`;
+                }
+            }
+        });
+    }
+
+    elem.addEventListener("input", update);
+
+</script>
+
+<style>
+    * {
+        overflow-wrap: break-word;
+    }
+
+    .main {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        margin: 0;
+    }
+
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        margin-bottom: 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+
+    input[type="submit"] {
+        padding: 10px 15px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    #chose {
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+    .options {
+        margin: 15px;
+    }
+
+    .options:hover {
+        color: #0056b3;
+    }
+</style>

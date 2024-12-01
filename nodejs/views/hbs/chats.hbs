@@ -1,0 +1,66 @@
+{{> nav}}
+
+
+{{!-- <div class="list">
+    {{#each chats}}
+    <a href="../tasks/task/{{this.id}}" class="small_card">
+        <h2>{{this.name}}</h2>
+        {{#unless this.watched}}<p>Новое сообщение</p>{{/unless}}
+    </a>
+    {{/each}}
+</div> --}}
+
+{{#each chats}}
+<div class="small_card">
+    <a href="read/{{this.id}}">
+        <div class="card">
+            <div class="card-title">{{this.name}}</div>
+            {{#unless this.watched}} <div class="card-info">Есть непрочитанные сообщения</div>{{/unless}}
+        </div>
+    </a>
+</div>
+{{/each}}
+
+<style>
+    * {
+        overflow-wrap: break-word;
+    }
+
+    .small_card>a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .small_card {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .small_card .card:hover {
+        background-color: #fafafa;
+    }
+
+    .small_card .card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        width: 300px;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .small_card .card-title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .small_card .card-info {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+</style>

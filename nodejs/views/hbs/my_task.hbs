@@ -1,0 +1,178 @@
+{{> nav}}
+
+
+{{#unless vals}}
+<h3 style="margin: 20px;">У вас нет задач</h3>
+{{/unless}}
+
+
+<style>
+    * {
+        overflow-wrap: break-word;
+    }
+
+    .small_card>a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .small_card {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .small_card .card:hover {
+        background-color: #fafafa;
+    }
+
+    .small_card .card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        width: 300px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .small_card .card-title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .small_card .card-info {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+
+    .small_card .card-priority_1 {
+        color: #4CAF50;
+    }
+
+    .small_card .card-priority_2 {
+        color: #45c938;
+    }
+
+    .small_card .card-priority_3 {
+        color: #00EC00;
+    }
+
+    .small_card .card-priority_4 {
+        color: #bfbf2d;
+    }
+
+    .small_card .card-priority_5 {
+        color: #bea814;
+    }
+
+    .small_card .card-priority_6 {
+        color: #FF9800;
+    }
+
+    .small_card .card-priority_7 {
+        color: #ff7700;
+    }
+
+    .small_card .card-priority_8 {
+        color: #FF5722;
+    }
+
+    .small_card .card-priority_9 {
+        color: #D32F2F;
+    }
+
+    .small_card .card-priority_10 {
+        color: #B71C1C;
+    }
+
+    .filter_buttons {
+        width: 300px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+    }
+
+
+    .filter_buttons button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .filter_buttons button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+{{#if vals}}
+<div class="small_card">
+    <div class="filter_buttons">
+        <p>Сортировать по </p>
+        <div class="card-info">
+            <button onclick="sort_date(this)"> Порядку </button>
+            <button onclick="sort_date(this)"> Приоритету </button>
+            <button onclick="sort_date(this)"> Дедлайну </button>
+        </div>
+    </div>
+</div>
+{{/if}}
+
+<div id="list">
+    {{#each vals}}
+    <div class="small_card">
+        <a href="/tasks/task/{{this.id}}">
+            <div class="card">
+                <div class="card-title">{{this.name}}</div>
+                <div class="card-info">
+                    <div class="card-time">Дедлайн: {{DATEFORMAT this.deadline}}</div>
+                    <div class="card-priority_{{this.priority}}">Приоритет: {{this.priority}}</div>
+                </div>
+                <div class="info" _id="{{this.id}}" date="{{this.deadline}}" priority="{{this.priority}}"
+                    style="display: none;"></div>
+            </div>
+        </a>
+    </div>
+    {{/each}}
+</div>
+
+<script>
+    function sort_date(button) {
+        let listElem = document.getElementById("list");
+        let arr = Array.from(listElem.children);
+        listElem.innerHTML = '';
+
+
+
+        let get = (elem, attr)=>elem.getElementsByClassName("info")[0].getAttribute(attr)
+        let compare = (a, b, attr, reform)=> (reform(get(a, attr)) - reform(get(b, attr))); 
+
+
+        switch (button.innerHTML.trim()) {
+            case ("Порядку"): {
+                arr.sort((a, b)=>compare(a, b, "_id", Number));
+                break;
+            }
+            case ("Приоритету"): {
+                arr.sort((a, b)=>compare(b, a, "priority", Number));
+                break;
+            }
+            case ("Дедлайну"): {
+                arr.sort((a, b)=> compare(a, b, "date", x => new Date(x)));
+                break;
+            }
+        }
+
+        for(let i in arr){
+            listElem.appendChild(arr[i]);
+        }
+    }
+</script>
