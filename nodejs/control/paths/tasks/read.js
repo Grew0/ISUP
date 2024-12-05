@@ -40,7 +40,7 @@ route.get("/task/:id", (req, res)=>{
 route.get("/my", (req, res)=>{
     console.log(Number(Login(req).getLogin()));
     TaskSQL.read_where({ownerid: Number(Login(req).getLogin())}, (data)=>{
-        res.render("my_task", {vals: data});
+        res.render("my_task", {vals: data.reverse()});
     }, err=>res.send(err.message));
 });
 

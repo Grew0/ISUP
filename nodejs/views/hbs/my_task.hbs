@@ -158,7 +158,7 @@
 
         switch (button.innerHTML.trim()) {
             case ("Порядку"): {
-                arr.sort((a, b)=>compare(a, b, "_id", Number));
+                arr.sort((a, b)=>compare(b, a, "_id", Number));
                 break;
             }
             case ("Приоритету"): {
