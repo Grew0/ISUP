@@ -21,8 +21,6 @@ route.post("/delegate/:id", urlencodedParser, async(req, res)=>{
         return;
     }
 
-    console.log("Body is ", req.body);
-
     UserSQL.read_where({login: req.body.login}, user=>{
         if(user.length != 1){
             res.render("message", {message: "no such login"});

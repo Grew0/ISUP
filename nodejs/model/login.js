@@ -49,7 +49,7 @@ class Login{
     }
 
     getLogin(){
-        return this.session?.login?.user?.id;
+        return Number(this.session?.login?.user?.id);
     }
 
     async subscribe(task){

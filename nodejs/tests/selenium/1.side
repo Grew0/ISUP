@@ -90,7 +90,7 @@
         ["xpath=//input[@name='password']", "xpath:attributes"],
         ["xpath=//input[2]", "xpath:position"]
       ],
-      "value": "passs"
+      "value": "pass"
     }, {
       "id": "8e14eba8-affc-4e10-b4d4-c6d2143f97aa",
       "comment": "",
@@ -311,7 +311,7 @@
         ["xpath=//input[@name='password']", "xpath:attributes"],
         ["xpath=//input[2]", "xpath:position"]
       ],
-      "value": "passs"
+      "value": "pass"
     }, {
       "id": "8a96e63a-9d11-40c6-b727-545f5d0f5e7b",
       "comment": "",
@@ -859,16 +859,6 @@
         ["xpath=//a/div/div", "xpath:position"]
       ],
       "value": ""
-    }, {
-      "id": "2ab79131-77c6-4d37-979b-ba69925c41da",
-      "comment": "",
-      "command": "click",
-      "target": "css=.incard",
-      "targets": [
-        ["css=.incard", "css:finder"],
-        ["xpath=//a/div", "xpath:position"]
-      ],
-      "value": ""
     }]
   }, {
     "id": "41322def-8540-4e4b-aa83-06aae0fecb1b",
@@ -889,17 +879,6 @@
         ["css=.small_card:nth-child(1) .card", "css:finder"],
         ["xpath=//div[@id='list']/div/a/div", "xpath:idRelative"],
         ["xpath=//a/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "461aff74-b513-4500-8e07-651d8c063121",
-      "comment": "",
-      "command": "click",
-      "target": "css=b",
-      "targets": [
-        ["css=b", "css:finder"],
-        ["xpath=//b", "xpath:position"],
-        ["xpath=//b[contains(.,'Написать введение')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
@@ -1109,7 +1088,7 @@
       "id": "45302ce4-4d24-4e76-8479-10a234e30945",
       "comment": "",
       "command": "click",
-      "target": "linkText=Проверить подписки",
+      "target": "linkText=Чаты",
       "targets": [
         ["linkText=Проверить подписки", "linkText"],
         ["css=li:nth-child(3) > a", "css:finder"],
@@ -1195,7 +1174,7 @@
       "id": "7de87311-706c-479b-adae-7408093f6d7a",
       "comment": "",
       "command": "click",
-      "target": "linkText=Проверить подписки",
+      "target": "linkText=Чаты",
       "targets": [
         ["linkText=Проверить подписки", "linkText"],
         ["css=li:nth-child(3) > a", "css:finder"],
@@ -1518,6 +1497,294 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "f2c8dc0f-0955-4f69-83fd-eab064eeb77d",
+    "name": "Alerts",
+    "commands": [{
+      "id": "34f9c628-967c-48a1-ab86-42572b97acad",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/tasks/my",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2bdf3462-5a8a-4a0a-9ca8-dd6753617981",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Оповещения",
+      "targets": [
+        ["linkText=Оповещения", "linkText"],
+        ["css=li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Оповещения')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/alerts/getByUser')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Оповещения')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "22a229f2-dcd9-44c7-9f38-4e3a686e5a5b",
+      "comment": "",
+      "command": "click",
+      "target": "id=no_alerts_notification",
+      "targets": [
+        ["id=no_alerts_notification", "id"],
+        ["css=#no_alerts_notification", "css:finder"],
+        ["xpath=//h3[@id='no_alerts_notification']", "xpath:attributes"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'У вас нет оповещений!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "634c7589-eefa-436b-8cb9-fffc1e656b15",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Мои задачи",
+      "targets": [
+        ["linkText=Мои задачи", "linkText"],
+        ["css=li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Мои задачи')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/tasks/my')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Мои задачи')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "865cb0a1-b86f-4c22-b7ae-a2012d25fc24",
+      "comment": "",
+      "command": "click",
+      "target": "css=.small_card:nth-child(2) .card-title",
+      "targets": [
+        ["css=.small_card:nth-child(2) .card-title", "css:finder"],
+        ["xpath=//div[@id='list']/div[2]/a/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b50b59e0-0b76-4f7e-a3bf-428c990826f9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Открыть оповещения",
+      "targets": [
+        ["linkText=Открыть оповещения", "linkText"],
+        ["css=a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Открыть оповещения')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/alerts/getByTask/92')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'Открыть оповещения')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "690e42bd-2a26-494f-a4ec-a035e8bd49a3",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@onclick=\"document.location='/alerts/append/92'\"]", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Добавить оповещение')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4bd8caef-60d5-451b-8130-a1b4eaa81d7a",
+      "comment": "",
+      "command": "click",
+      "target": "id=desc",
+      "targets": [
+        ["id=desc", "id"],
+        ["name=desc", "name"],
+        ["css=#desc", "css:finder"],
+        ["xpath=//textarea[@id='desc']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6996a5c0-b86f-41ec-ae03-5754ce384dde",
+      "comment": "",
+      "command": "type",
+      "target": "id=desc",
+      "targets": [
+        ["id=desc", "id"],
+        ["name=desc", "name"],
+        ["css=#desc", "css:finder"],
+        ["xpath=//textarea[@id='desc']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Ошибка !"
+    }, {
+      "id": "56a1383a-1c88-41ad-98c2-7e9022e9fbe0",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(5)",
+      "targets": [
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@value='Создать оповещение']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be0e3928-4b17-4eca-9de9-b62618b10cc2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Написать отчет 2",
+      "targets": [
+        ["linkText=Написать отчет 2", "linkText"],
+        ["css=.card-title > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Написать отчет 2')]", "xpath:link"],
+        ["xpath=//div[@id='alert_card_99']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/tasks/task/92')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Написать отчет 2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "96ed65cd-9caf-470e-979f-c3decf21e778",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Открыть оповещения",
+      "targets": [
+        ["linkText=Открыть оповещения", "linkText"],
+        ["css=a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Открыть оповещения')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/alerts/getByTask/92')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'Открыть оповещения')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ee30501-3278-43e1-acff-d3435783e981",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Изменить оповещение",
+      "targets": [
+        ["linkText=Изменить оповещение", "linkText"],
+        ["css=.actions > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Изменить оповещение')]", "xpath:link"],
+        ["xpath=//div[@id='alert_card_99']/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/alerts/change/99')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Изменить оповещение')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "910c563d-c529-4f82-b185-6547bd7f4773",
+      "comment": "",
+      "command": "click",
+      "target": "id=desc",
+      "targets": [
+        ["id=desc", "id"],
+        ["name=desc", "name"],
+        ["css=#desc", "css:finder"],
+        ["xpath=//textarea[@id='desc']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb5af702-7855-4ab0-9314-75af094fbf25",
+      "comment": "",
+      "command": "type",
+      "target": "id=desc",
+      "targets": [
+        ["id=desc", "id"],
+        ["name=desc", "name"],
+        ["css=#desc", "css:finder"],
+        ["xpath=//textarea[@id='desc']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Фатальная ошибка!"
+    }, {
+      "id": "5936f6f7-9bd8-45cd-8c89-ecdd021d4d92",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(5)",
+      "targets": [
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@value='Изменить оповещение']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7f28ca3-8046-4e21-933d-4119db8d512a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Закрыть оповещение",
+      "targets": [
+        ["linkText=Закрыть оповещение", "linkText"],
+        ["css=.closeclass", "css:finder"],
+        ["xpath=//a[contains(text(),'Закрыть оповещение')]", "xpath:link"],
+        ["xpath=//a[@onclick='close_alert(99)']", "xpath:attributes"],
+        ["xpath=//div[@id='alert_card_99']/div/div[3]/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Закрыть оповещение')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c33560c-b6f9-4ce4-8f3c-a68f5ad64cfe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.openclass",
+      "targets": [
+        ["css=.openclass", "css:finder"],
+        ["xpath=//a[contains(text(),'Открыть\n                        оповещение')]", "xpath:link"],
+        ["xpath=//a[@onclick='open_alert(99)']", "xpath:attributes"],
+        ["xpath=//div[@id='alert_card_99']/div/div[3]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "328addd2-42f5-419a-8587-4f70b8713bec",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Оповещения",
+      "targets": [
+        ["linkText=Оповещения", "linkText"],
+        ["css=li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Оповещения')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/alerts/getByUser')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Оповещения')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc3a46f5-ac88-4a45-bc28-943028da1295",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a343a51-4516-4c93-a23f-94204b78cc26",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Удалить оповещение",
+      "targets": [
+        ["linkText=Удалить оповещение", "linkText"],
+        ["css=a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Удалить оповещение')]", "xpath:link"],
+        ["xpath=//a[@onclick='delete_alert(99)']", "xpath:attributes"],
+        ["xpath=//div[@id='alert_card_99']/div/div[3]/a[4]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[3]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Удалить оповещение')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "70374107-e78d-4439-942a-b92383bf15a1",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Удалить оповещение",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78fa85e1-0c77-417c-91a5-a166bd98ca74",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "f447c8b7-785b-4dd0-b3dc-3bc9349a669b",
@@ -1525,7 +1792,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 30000,
-    "tests": ["84510fcd-4a74-4884-a703-f65e99ced025", "793803d8-bb4a-4772-8c88-136cc91a47f1", "4d0c13c1-31b4-4b2d-afd3-03809846313a", "73faf5c5-247c-47d6-b2e4-d910b233b5bf", "1297bd0f-b879-44ed-a001-1ec78792e29c", "41322def-8540-4e4b-aa83-06aae0fecb1b", "f3546589-3a8d-40d8-847e-a5ce0f04a2cf", "f6e32371-be1a-4223-95ab-ac8393ac96a6", "2b316f20-dc62-4a15-8d00-a5cdcc90be39", "dca9f6fc-fe85-42cc-a250-942508a66d9c"]
+    "tests": ["84510fcd-4a74-4884-a703-f65e99ced025", "793803d8-bb4a-4772-8c88-136cc91a47f1", "4d0c13c1-31b4-4b2d-afd3-03809846313a", "73faf5c5-247c-47d6-b2e4-d910b233b5bf", "1297bd0f-b879-44ed-a001-1ec78792e29c", "41322def-8540-4e4b-aa83-06aae0fecb1b", "f3546589-3a8d-40d8-847e-a5ce0f04a2cf", "f6e32371-be1a-4223-95ab-ac8393ac96a6", "2b316f20-dc62-4a15-8d00-a5cdcc90be39", "f2c8dc0f-0955-4f69-83fd-eab064eeb77d", "dca9f6fc-fe85-42cc-a250-942508a66d9c"]
   }],
   "urls": ["http://www.google.com/"],
   "plugins": []

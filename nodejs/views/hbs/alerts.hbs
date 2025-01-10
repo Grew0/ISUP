@@ -1,0 +1,187 @@
+{{> nav}}
+
+<div class="alert_card" {{#if alerts}}{{#unless task}}style="display:none" {{/unless}}{{/if}}>
+    <div class="add_button">
+        <h3 id="no_alerts_notification" style="margin: 5px; {{#if alerts}}display: none{{/if}}">
+            {{#if task}}У этой задачи нет оповещений{{else}} У вас нет оповещений!{{/if}}</h3>
+        {{#if task}}
+        <button onclick="document.location='/alerts/append/{{task_id}}'"> Добавить оповещение </button>
+        {{/if}}
+    </div>
+</div>
+
+
+<div id="list">
+
+    <div id="opened_alerts">
+        {{#each alerts}}
+        {{#unless this.isclosed}}
+        <div class="alert_card" id="alert_card_{{this.id}}">
+            <div class="card">
+                <div class="card-title">К задаче: <a href="/tasks/task/{{this.task}}">{{this.task_name}}</a></div>
+                <div class="descript">{{this.descript}}</div>
+                <div class="actions">
+                    {{#if this.allow_to_change}}
+                    <a href='/alerts/change/{{this.id}}'> Изменить оповещение</a>
+
+                    <a class="openclass" onclick="open_alert({{this.id}})" href="#" style="display: none;"> Открыть
+                        оповещение </a>
+                    <a class="closeclass" onclick="close_alert({{this.id}})" href="#">Закрыть оповещение </a>
+                    <a onclick="delete_alert({{this.id}})" href="#"> Удалить оповещение </a>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+        {{/unless}}
+        {{/each}}
+    </div>
+    <div id="closed_alerts">
+        {{#each alerts}}
+        {{#if this.isclosed}}
+        <div class="alert_card" id="alert_card_{{this.id}}">
+            <div class="card">
+                <div class="card-title">К задаче: <a href="/tasks/task/{{this.task}}">{{this.task_name}}</a></div>
+                <div class="descript">{{this.descript}}</div>
+                <div class="actions">
+                    {{#if this.allow_to_change}}
+                    <a href='/alerts/{{this.id}}/change'> Изменить оповещение</a>
+
+                    <a class="openclass" onclick="open_alert({{this.id}})" href="#"> Открыть оповещение </a>
+                    <a class="closeclass" onclick="close_alert({{this.id}})" href="#" style="display: none;">Закрыть
+                        оповещение </a>
+                    <a onclick="delete_alert({{this.id}})" href="#"> Удалить оповещение </a>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+        {{/if}}
+        {{/each}}
+    </div>
+</div>
+
+<style>
+    .actions {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .actions>*,
+    .card-title a {
+        color: #5555ff;
+        text-decoration: none;
+        width: max-content;
+    }
+
+    .actions>* {
+        margin-top: 10px;
+    }
+
+    .actions>*:hover,
+    .card-title a:hover {
+        color: #9955ff;
+        text-decoration: none;
+    }
+
+    * {
+        overflow-wrap: break-word;
+    }
+
+    .alert_card {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .alert_card .card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        width: 400px;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .alert_card .card-title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .alert_card .descript {
+        word-wrap: break-word;
+        margin-top: 10px;
+    }
+
+    #closed_alerts .alert_card {
+        opacity: 0.5;
+    }
+
+    .add_button {
+        width: 400px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+    }
+
+
+    .add_button button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .add_button button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<script>
+    function close_alert(id) {
+        fetch(`/alerts/close/${id}`, {
+            method: "POST"
+        }).then(res => {
+            let element = document.getElementById(`alert_card_${id}`);
+            document.getElementById("opened_alerts").removeChild(element);
+            document.getElementById("closed_alerts").appendChild(element);
+            element.getElementsByClassName("closeclass")[0].style.display = "none";
+            element.getElementsByClassName("openclass")[0].style.display = "inline";
+        }, err => console.log(err));
+    }
+
+    function open_alert(id) {
+        fetch(`/alerts/open/${id}`, {
+            method: "POST"
+        }).then(res => {
+            let element = document.getElementById(`alert_card_${id}`);
+            document.getElementById("closed_alerts").removeChild(element);
+            document.getElementById("opened_alerts").appendChild(element);
+            element.getElementsByClassName("closeclass")[0].style.display = "inline";
+            element.getElementsByClassName("openclass")[0].style.display = "none";
+        }, err => console.log(err));
+    }
+
+    function delete_alert(id) {
+        if (confirm("Удалить оповещение")) {
+            fetch(`/alerts/delete/${id}`, {
+                method: "DELETE"
+            }).then(res => {
+                let element = document.getElementById(`alert_card_${id}`);
+                element.remove();
+                console.log(document.getElementsByClassName("alert_card"));
+                let arr = document.getElementsByClassName("alert_card");
+                if (arr.length == 1) {
+                    document.getElementById("no_alerts_notification").style.display = "block";
+                    arr[0].style.display = "block";
+                }
+            }, err => console.log(err));
+        }
+    }
+</script>

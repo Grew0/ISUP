@@ -84,8 +84,6 @@ describe("Tests of TestSQL", function () {
     // Getting subtasks
     it("get children", async () => {
         let children = await TaskSQL.getChildren(taskid);
-        console.log(children)
-        console.log("Children.length: ", children.length);
         if (children.length != 2) throw new Error("Wrong children " + children);
         let ownerids = [children[0].ownerid, children[1].ownerid];
         if (ownerids.indexOf(ownerid2) == -1 || ownerids.indexOf(ownerid3) == -1)

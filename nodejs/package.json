@@ -4,8 +4,7 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha ./tests/*/*.test.js",
-    "start": "npm install && nodemon -L app.js",
-    "test_web": "mocha ./tests/*/*.site.js"
+    "start": "npm install && nodemon -L app.js"
   },
   "keywords": [],
   "author": "",

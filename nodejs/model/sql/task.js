@@ -89,7 +89,6 @@ class TaskSQL {
     async close(taskid) {
         return new Promise((res, rej) => {
             this.table.read((result) => {
-                console.log(result);
                 if (result.length == 0)
                     this.table.update({ id: taskid }, { isclosed: 1 }, _ => res(true), rej);
                 else res(false);

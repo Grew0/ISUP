@@ -1,9 +1,14 @@
 const express = require('express');
 const route = express.Router();
 
-route.use("/", require("./comments/read"));
-route.use("/", require("./comments/sub"));
-route.use("/", require("./comments/write"));
-route.use("/", require("./comments/chekout"));
+const read = require("./comments/read")
+const sub = require("./comments/sub")
+const write = require("./comments/write")
+const chekout = require("./comments/chekout")
+
+route.use("/", read);
+route.use("/", sub);
+route.use("/", write);
+route.use("/", chekout);
 
 module.exports = route;

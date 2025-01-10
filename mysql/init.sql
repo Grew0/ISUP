@@ -10,9 +10,9 @@ USE appDB;
 
 create table if not exists users(
     id int auto_increment not null,
-    name varchar(40) not null,
+    name text not null,
     login varchar(40) not null,
-    password varchar(100) not null,
+    password text not null,
     primary key(id),
     unique key (login)
 );
@@ -20,7 +20,7 @@ create table if not exists users(
 create table if not exists tasks(
     id int auto_increment not null,
     toplevelid int,
-    name varchar(40) not null,
+    name text not null,
     descript text not null,
     deadline timestamp not null,
     priority smallint not null,
@@ -51,8 +51,24 @@ create table if not exists subs (
     user int not null,
     task int not null,
     watched boolean not null default 1,
-    primary key (user, task),
-    foreign key (user) references users(id),
+    foreign key (user) references users(id)
+    on delete cascade
+    on update cascade,
+    foreign key (task) references tasks(id)
+    on delete cascade
+    on update cascade
+);
+
+create table if not exists alerts (
+    id int not null auto_increment,
+    writer int not null,
+    task int not null,
+    descript text not null,
+    isclosed smallint(1) not null default 0,
+    primary key(id),
+    foreign key (writer) references users(id)
+    on delete cascade 
+    on update cascade,
     foreign key (task) references tasks(id)
     on delete cascade
     on update cascade

@@ -52,7 +52,6 @@ route.post("/update/:id", urlencodedParser, (req, res) => {
         priority: priority
     }).then(_ => {
         let path = req.path.split("/");
-        console.log(path);
         path.pop();
         res.redirect("../task/" + id);
     }, err => res.render("message", { message: err.message }));

@@ -6,16 +6,16 @@ const Login = require('../../../model/login');
 const subs = require('../../../model/sql/subs');
 
 // To read comments
-route.get("/read/:task", async (req, res)=>{
-    if(isNaN(Number(req.params.task))){
+route.get("/read/:task", async (req, res) => {
+    if (isNaN(Number(req.params.task))) {
         res.send("Is it a number");
         return;
     }
 
     let renderData = {};
-    try{
+    try {
         renderData.isSub = await Login(req).isSubscribed(req.params.task);
-    }catch(err){
+    } catch (err) {
         renderData.isSub = err.message;
     }
 
@@ -23,18 +23,18 @@ route.get("/read/:task", async (req, res)=>{
 
 });
 
-route.get("/read/:task/getList", async(req, res)=>{
-    if(isNaN(Number(req.params.task))){
+route.get("/read/:task/getList", async (req, res) => {
+    if (isNaN(Number(req.params.task))) {
         res.send("Is it a number");
         return;
     }
 
     let comments = await ComSQL.get(Number(req.params.task));
     let renderData = {};
-    for(let i in comments){
-        try{
+    for (let i in comments) {
+        try {
             comments[i].writer = await UserSQL.getById(comments[i].writer);
-        }catch(error){
+        } catch (error) {
             comments[i].writer = error.message;
         }
     }
@@ -47,7 +47,10 @@ route.get("/read/:task/getList", async(req, res)=>{
 
 });
 
-route.get("/read/:task/back", async (req, res)=>{
+route.get("/read/:task/back", async (req, res) => {
     res.redirect("/tasks/task/" + req.params.task);
 });
+
+
+
 module.exports = route;

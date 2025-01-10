@@ -111,7 +111,7 @@
     <div class="card">
         <div class="card-header">
             <div class="card-title">{{name}}</div>
-            <div class="card-owner">Исполнитель: {{owner}}</div>
+            <div class="card-owner">Исполнитель:<br>{{owner}}</div>
         </div>
         <div class="card-info">
             <div class="card-time">Дедлайн: {{DATEFORMAT deadline}}</div>
@@ -152,7 +152,7 @@
             <a href='/comments/read/{{parent}}'> Открыть чат </a>
 
             {{/unless}}
-
+            <a href="/alerts/getByTask/{{parent}}">Открыть оповещения</a>
             {{#if allowed_directly}}
             <a href="#" onclick="Action.delete(event)"> Удалить задачу </a>
             {{#if isclosed}}
